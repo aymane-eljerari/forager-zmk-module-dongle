@@ -133,14 +133,14 @@
         combo_lctrl {
             timeout-ms = <30>;
             key-positions = <11 13>;
-            bindings = <&kp LALT>;
+            bindings = <&kp LCTRL>;
             layers = <0>;
         };
 
         combo_rctrl {
             timeout-ms = <30>;
             key-positions = <16 18>;
-            bindings = <&kp LALT>;
+            bindings = <&kp LCTRL>;
             layers = <0>;
         };
 
