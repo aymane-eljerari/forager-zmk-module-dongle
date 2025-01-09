@@ -176,7 +176,7 @@
             bindings = <
             &kp B           &kp L           &kp D           &kp C           &kp V                                           &kp J           &kp F           &kp O           &kp U           &kp ESC
             &kp N           &kp R           &kp T           &kp S           &kp G                                           &kp Y           &kp H           &kp A           &kp E           &kp I
-            &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &kp K           &kp P           &kp KP_SLASH    &kp KP_DOT      &kp COMMA
+            &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &kp K           &kp P           &kp SLASH       &kp KP_DOT      &kp COMMA
                                                             &lm DSK LALT    &mo SYM                                         &kp SPACE       &kp LSHIFT
             >;
         };
