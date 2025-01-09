@@ -11,8 +11,6 @@
 // #define MEH LS(LC(LALT))
 
 
-
-
 #define BASE 0
 #define SYM  1
 #define NUM  2
@@ -66,7 +64,8 @@
             bindings
                 = <&macro_press &kp LSHIFT &kp LCTRL &kp LALT &kp LCMD>
                 , <&macro_param_1to1>
-                , <&kp MACRO_PLACEHOLDER>
+                , <macro_press &kp MACRO_PLACEHOLDER>
+                , <macro_release &kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp LSHIFT &kp LCTRL &kp LALT &kp LCMD>
                 ;
         };
@@ -80,7 +79,8 @@
             bindings
                 = <&macro_press &kp LCMD &kp LSHIFT>
                 , <&macro_param_1to1>
-                , <&kp MACRO_PLACEHOLDER>
+                , <macro_press &kp MACRO_PLACEHOLDER>
+                , <macro_release &kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp LCMD &kp LSHIFT>
                 ;
         };
@@ -93,7 +93,8 @@
             bindings
                 = <&macro_press &kp LCMD &kp LCTRL>
                 , <&macro_param_1to1>
-                , <&kp MACRO_PLACEHOLDER>
+                , <macro_press &kp MACRO_PLACEHOLDER>
+                , <macro_release &kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp LCMD &kp LCTRL>
                 ;
         };
@@ -106,7 +107,8 @@
             bindings
                 = <&macro_press &kp LALT &kp LCTRL &kp LSHIFT>
                 , <&macro_param_1to1>
-                , <&kp MACRO_PLACEHOLDER>
+                , <macro_press &kp MACRO_PLACEHOLDER>
+                , <macro_release &kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp LALT &kp LCTRL &kp LSHIFT>
                 ;
         };
