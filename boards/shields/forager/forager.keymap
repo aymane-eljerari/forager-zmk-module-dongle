@@ -51,7 +51,7 @@
             tap-ms = <0>;
             #binding-cells = <0>;
             bindings
-                , <&macro_press &mo NUM>
+                = <&macro_press &mo NUM>
                 , <&macro_pause_for_release>
                 , <&macro_release &mo NUM>
                 ;
