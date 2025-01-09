@@ -231,7 +231,7 @@
             display-name = "One";
             bindings = <
             &to BASE        &kp LSHIFT      &kp ESC         &kp BACKSPACE   &none                                           &none           &none           &none           &none           &none
-            &LG(A)          &LG(C)          &LG(X)          &LG(V)          &none                                           &none           &none           &none           &none           &none
+            &kp LG(A)       &kp LG(C)       &kp LG(X)       &kp LG(V)       &none                                           &none           &none           &none           &none           &none
             &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none
                                                             &none           &none                                           &none          &none
         };
