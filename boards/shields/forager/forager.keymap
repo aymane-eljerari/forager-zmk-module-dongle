@@ -49,6 +49,7 @@
                 , <&macro_param_1to1>
                 , <&kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp LSHIFT &kp LCTRL &kp LALT &kp LCMD>
+                ;
         };
 
         // NAV layer utils
@@ -62,6 +63,7 @@
                 , <&macro_param_1to1>
                 , <&kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp LCMD &kp LSHIFT>
+                ;
         };
 
         lck: lock_screen_macro {
@@ -74,6 +76,7 @@
                 , <&macro_param_1to1>
                 , <&kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp LCMD &kp LCTRL>
+                ;
         };
 
         cam: camera_macro {
@@ -86,6 +89,7 @@
                 , <&macro_param_1to1>
                 , <&kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp LALT &kp LCTRL &kp LSHIFT>
+                ;
         };
 
 
@@ -230,7 +234,7 @@
             &LG(A)          &LG(C)          &LG(X)          &LG(V)          &none                                           &none           &none           &none           &none           &none
             &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none
                                                             &none           &none                                           &none          &none
-        }
+        };
     };
 };
 
