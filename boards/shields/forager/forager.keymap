@@ -181,7 +181,7 @@
             &to ONE         &kp PERCENT     &kp LPAR        &kp RPAR        &kp AT                                         &kp KP_PLUS     &kp LBKT        &kp RBKT        &none           &none
             &kp TAB         &kp CARET       &kp STAR        &kp KP_EQUAL    &kp DOLLAR                                     &kp BACKSPACE   &kp SEMICOLON   &kp APOSTROPHE  &kp BACKSLASH   &kp ENTER
             &kp MEH         &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp KP_MINUS    &kp AMPERSAND   &kp EXCL        &kp GRAVE       &none
-                                                            &none           &none                                           &mo NUM         &kp LSHIFT
+                                                            &none           &none                                          &mo NUM         &kp LSHIFT
             >;
         };
 
@@ -230,7 +230,7 @@
             display-name = "One";
             bindings = <
             &to BASE        &kp LSHIFT      &kp ESC         &kp BACKSPACE   &none                                           &none           &none           &none           &none           &none
-            &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(A)                                       &none           &none           &none           &none           &none
+            &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                       &none           &none           &none           &none           &none
             &none           &kp LG(Z)       &kp LG(LS(Z))   &none           &none                                           &none           &none           &none           &none           &none
                                                             &none           &none                                           &none           &none
             >;
