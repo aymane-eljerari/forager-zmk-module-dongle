@@ -168,7 +168,7 @@
         base {
             display-name = "Base";
             bindings = <
-            &kp B           &kp L           &kp D           &kp C           &kp V                                           &kp J           &kp F           &kp O           &kp U           &kp ESC
+            &kp B           &kp L           &kp D           &kp C           &kp V                                           &kp J           &kp F           &kp O           &kp U           &none
             &kp N           &kp R           &kp T           &kp S           &kp G                                           &kp Y           &kp H           &kp A           &kp E           &kp I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &kp K           &kp P           &kp SLASH       &kp KP_DOT      &kp COMMA
                                                             &lm DSK LALT    &mo SYM                                         &kp SPACE       &kp LSHIFT
@@ -178,7 +178,7 @@
         sym {
             display-name = "Symbol";
             bindings = <
-            &to ONE         &kp PERCENT     &kp LPAR        &kp RPAR        &kp AT                                         &kp KP_PLUS     &kp LBKT        &kp RBKT        &none           &none
+            &to ONE         &kp PERCENT     &kp LPAR        &kp RPAR        &kp AT                                         &kp KP_PLUS     &kp LBKT        &kp RBKT        &kp ESC         &none
             &kp TAB         &kp CARET       &kp STAR        &kp KP_EQUAL    &kp DOLLAR                                     &kp BACKSPACE   &kp SEMICOLON   &kp APOSTROPHE  &kp BACKSLASH   &kp ENTER
             &kp MEH         &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp KP_MINUS    &kp AMPERSAND   &kp EXCL        &kp GRAVE       &none
                                                             &none           &none                                          &mo NUM         &kp LSHIFT
