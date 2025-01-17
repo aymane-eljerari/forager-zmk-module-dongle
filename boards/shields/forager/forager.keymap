@@ -222,10 +222,10 @@
         nav {
             display-name = "Nav";
             bindings = <
-            &kp C_BRI_UP    &kp LSHIFT      &kp LCTRL       &kp LCMD        &kp C_VOL_UP                                    &cam KP_PLUS    &cam F          &cam O          &none           &none
+            &kp C_BRI_UP    &kp LSHIFT      &kp LCTRL       &kp MEH         &kp C_VOL_UP                                    &cam KP_PLUS    &cam F          &cam O          &none           &none
             &kp C_BRI_DN    &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp C_MUTE                                      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp ENTER
             &mm N5          &lck Q          &mm S           &mm D           &kp C_VOL_DN                                    &cam KP_MINUS   &cam P          &cam U          &cam R          &none
-                                                            &kp LALT        &kp MEH                                         &none           &studio_unlock
+                                                            &kp LALT        &kp LCMD                                        &none           &studio_unlock
             >;
         };
 
