@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <behaviors/rgbled_widget.dtsi>  // needed to use the behaviors
 
 
 // COMMA to KP_COMMA not macos compatible yet
