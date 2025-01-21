@@ -171,7 +171,20 @@
             bindings = <&sys_reset>;
             layers = <0>;
         };
-
+        
+        combo_battery_level {
+            timeout-ms = <30>;
+            key-positions = <11 19>;
+            bindings = <&ind_bat>;
+            layers = <0>;
+        };
+        
+        combo_connectivity {
+            timeout-ms = <30>;
+            key-positions = <0 9>;
+            bindings = <&ind_con>;
+            layers = <0>;
+        };
     };
 
 
