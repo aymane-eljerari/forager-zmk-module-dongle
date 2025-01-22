@@ -14,5 +14,8 @@ if SHIELD_FORAGER_DONGLE || SHIELD_FORAGER_LEFT || SHIELD_FORAGER_RIGHT
 
 config ZMK_SPLIT
     default y
+endif
 
+config CONFIG_LOG_MAX_LEVEL
+    default 4
 endif
