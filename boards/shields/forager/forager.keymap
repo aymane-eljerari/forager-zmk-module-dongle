@@ -4,9 +4,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/rgbled_widget.dtsi>  // needed to use the behaviors
 
-// COMMA to KP_COMMA not macos compatible yet
-
-// fix camera macos
+// jan 23 charge 
 
 #define MEH LS(LC(LALT))
 
@@ -172,19 +170,6 @@
             layers = <0>;
         };
         
-        combo_battery_level {
-            timeout-ms = <30>;
-            key-positions = <11 19>;
-            bindings = <&ind_bat>;
-            layers = <0>;
-        };
-        
-        combo_connectivity {
-            timeout-ms = <30>;
-            key-positions = <0 9>;
-            bindings = <&ind_con>;
-            layers = <0>;
-        };
     };
 
 
