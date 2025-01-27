@@ -8,7 +8,6 @@
 
 #define MEH LS(LC(LALT))
 
-
 #define BASE 0
 #define SYM  1
 #define NUM  2
@@ -211,7 +210,7 @@
             display-name = "Desk";
             bindings = <
             &kp B           &kp LSHIFT      &kp LCTRL       &kp LCMD        &kp V                                           &kp Y            &kp F           &kp O           &kp U           &none
-            &kp N           &kp N1          &kp N2          &kp N3          &kp G                                           &kp H            &kp J           &kp K           &kp L           &kp I
+            &kp N1          &kp N2          &kp N3          &kp N4          &kp G                                           &kp H            &kp J           &kp K           &kp L           &kp I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &none            &kp P           &kp T           &kp D           &none
                                                             &none           &none                                           &mo NAV          &mo APP
             >;
