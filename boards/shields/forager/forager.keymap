@@ -240,7 +240,7 @@
         one {
             display-name = "One";
             bindings = <
-            &non            &kp LSHIFT      &kp ESC         &kp BACKSPACE   &none                                           &none           &none           &none           &none           &ind_con
+            &none           &kp LSHIFT      &kp ESC         &kp BACKSPACE   &none                                           &none           &none           &none           &none           &ind_con
             &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                       &none           &none           &none           &none           &ind_bat
             &none           &kp LG(Z)       &kp LG(LS(Z))   &none           &none                                           &none           &none           &none           &none           &none
                                                             &to BASE        &none                                           &none           &none
