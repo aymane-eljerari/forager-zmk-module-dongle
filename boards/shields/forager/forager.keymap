@@ -68,7 +68,7 @@
                 ;
         };
 
-        cp: clipboard_macro {
+        cpb: clipboard_macro {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -114,70 +114,70 @@
     combos {
         compatible = "zmk,combos";
         combo_lcmd {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <12 13>;
             bindings = <&kp LCMD>;
             layers = <0>;
         };
 
         combo_rcmd {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <16 17>;
             bindings = <&kp LCMD>;
             layers = <0>;
         };
 
         combo_lalt {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <11 12>;
             bindings = <&kp LALT>;
             layers = <0>;
         };
 
         combo_ralt {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <17 18>;
             bindings = <&kp LALT>;
             layers = <0>;
         };
 
         combo_lctrl {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <11 13>;
             bindings = <&kp LCTRL>;
             layers = <0>;
         };
 
         combo_rctrl {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <16 18>;
             bindings = <&kp LCTRL>;
             layers = <0>;
         };
 
         combo_l_shft_ctrl {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <11 12 13>;
             bindings = <&kp LS(LCTRL)>;
             layers = <0>;
         };
 
         combo_r_shft_ctrl {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <16 17 18>;
             bindings = <&kp LS(LCTRL)>;
             layers = <0>;
         };
 
         combo_l_reset {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <0 4>;
             bindings = <&sys_reset>;
             layers = <0>;
         };
 
         combo_r_reset {
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             key-positions = <5 9>;
             bindings = <&sys_reset>;
             layers = <0>;
@@ -248,7 +248,7 @@
             bindings = <
             &kp C_BRI_UP    &kp LSHIFT      &kp LCTRL       &kp MEH         &kp C_VOL_UP                                    &none           &cam KP_PLUS    &cam O          &cam U           &cam R
             &kp C_BRI_DN    &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp C_VOL_DN                                    &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp ENTER
-            &cp C           &lck N5         &mm Q           &mm D           &kp C_MUTE                                      &kp BACKSPACE   &cam KP_MINUS   &cam F          &cam P          &none
+            &cpb C          &lck N5         &mm Q           &mm D           &kp C_MUTE                                      &kp BACKSPACE   &cam KP_MINUS   &cam F          &cam P          &none
                                                             &kp LALT        &kp LCMD                                        &none           &studio_unlock
             >;
         };
@@ -269,13 +269,13 @@
             bindings = <
             &none           &kp LSHIFT      &kp ESC         &kp BACKSPACE   &none                                           &none           &none           &none           &none           &ind_con
             &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                       &none           &none           &none           &none           &ind_bat
-            &none           &kp LG(Z)       &kp LG(LS(Z))   &none           &none                                           &none           &none           &none           &none           &none
+            &none           &kp LG(Z)       &kp LG(LS(Z))   &ind_con        &ind_bat                                        &none           &none           &none           &none           &none
                                                             &to BASE        &none                                           &none           &none
             >;
         };
     };
 
-soft_off {
+// soft_off {
 //    hold-time-ms = <3000>; // Only turn off it the key is held for 5 seconds or longer.
 // };
 
