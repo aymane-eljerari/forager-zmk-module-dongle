@@ -103,7 +103,7 @@
 //            binding
 //                = <&macro_press &kp LALT &kp LCTRL &kp LSHIFT>
 //                , <&macro_param_1to1>
-//                , <&macro_tap &kp MACRO_PLACEHOLDER>
+//                , <&kp MACRO_PLACEHOLDER>
 //                , <&macro_release &kp LALT &kp LCTRL &kp LSHIFT>
 //                ;
 //        };
@@ -114,9 +114,10 @@
             tap-ms = <0>;
             #binding-cells = <1>;
             bindings
-                = <&macro_tap &kp LALT &kp LCTRL &kp LSHIFT>
+                = <&macro_press &kp LALT &kp LCTRL &kp LSHIFT>
                 , <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LALT &kp LCTRL &kp LSHIFT>
                 ;
         };
 
