@@ -207,7 +207,7 @@
         base {
             display-name = "Base";
             bindings = <
-            &kp B           &kp L           &kp D           &kp C           &kp V                                          &kp J           &kp F           &kp O           &kp U           &none
+            &kp B           &kp L           &kp D           &kp C           &kp V                                          &kp J           &kp F           &bt BT_PRV           &bt BT_NXT           &bt BT_CLR
             &kp N           &kp R           &kp T           &kp S           &kp G                                          &kp Y           &kp H           &kp A           &kp E           &kp I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                          &kp K           &kp P           &kp SLASH       &kp KP_DOT      &kp COMMA
                                                             &lm DSK LALT    &mo SYM                                        &kp SPACE       &kp LSHIFT
