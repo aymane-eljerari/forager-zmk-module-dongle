@@ -217,8 +217,8 @@
             bindings = <
             &none           &kp PERCENT     &kp LPAR        &kp RPAR        &kp AT                                         &kp KP_PLUS     &kp LBKT        &kp RBKT        &kp ESC         &none
             &kp TAB         &kp CARET       &kp STAR        &kp KP_EQUAL    &kp DOLLAR                                     &kp KP_MINUS    &kp SEMICOLON   &kp APOSTROPHE  &kp BACKSLASH   &kp ENTER
-            &kp MEH         &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp BACKSPACE   &kp EXCL        &kp AMPERSAND        &kp GRAVE       &none
-                                                            &to ONE         &none                                          &mo NUM         &kp LSHIFT
+            &kp MEH         &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp BACKSPACE   &kp EXCL        &kp AMPERSAND   &kp GRAVE       &none
+                                                            &none           &none                                          &mo NUM         &kp LSHIFT
             >;
         };
 
