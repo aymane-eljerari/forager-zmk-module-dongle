@@ -12,7 +12,7 @@
 #define DSK  3
 #define NAV  4
 #define APP  5
-#define ONE  6
+// #define ONE  6
 
 
 / {
@@ -205,7 +205,7 @@
         base {
             display-name = "Base";
             bindings = <
-            &kp B           &kp L           &kp D           &kp C           &kp V                                          &kp J           &kp F           &kp O           &kp U           &none
+            &kp B           &kp L           &kp D           &kp C           &kp V                                          &kp J           &kp F           &kp O           &kp U           &kp SPACE
             &kp N           &kp R           &kp T           &kp S           &kp G                                          &kp Y           &kp H           &kp A           &kp E           &kp I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                          &kp K           &kp P           &kp SLASH       &kp KP_DOT      &kp COMMA
                                                             &lm DSK LALT    &mo SYM                                        &kp SPACE       &kp LSHIFT
@@ -217,7 +217,7 @@
             bindings = <
             &none           &kp PERCENT     &kp LPAR        &kp RPAR        &kp AT                                         &kp KP_PLUS     &kp LBKT        &kp RBKT        &kp ESC         &none
             &kp TAB         &kp CARET       &kp STAR        &kp KP_EQUAL    &kp DOLLAR                                     &kp KP_MINUS    &kp SEMICOLON   &kp APOSTROPHE  &kp BACKSLASH   &kp ENTER
-            &kp MEH         &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp BACKSPACE   &kp AMPERSAND   &kp EXCL        &kp GRAVE       &none
+            &kp MEH         &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp BACKSPACE   &kp EXCL        &kp AMPERSAND        &kp GRAVE       &none
                                                             &to ONE         &none                                          &mo NUM         &kp LSHIFT
             >;
         };
@@ -247,7 +247,7 @@
             bindings = <
             &kp C_BRI_UP    &kp LSHIFT      &kp LCTRL       &kp MEH         &kp C_VOL_UP                                    &none           &cam KP_PLUS    &cam O          &cam U          &none
             &kp C_BRI_DN    &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp C_VOL_DN                                    &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp ENTER
-            &cpb C          &cpb N5         &mm S           &mm D           &kp C_MUTE                                      &kp BACKSPACE   &cam KP_MINUS   &cam F          &cam P          &cam R
+            &cpb C          &cpb N5         &mm Q           &mm D           &kp C_MUTE                                      &kp BACKSPACE   &cam KP_MINUS   &cam F          &cam P          &cam R
                                                             &kp LALT        &kp LCMD                                        &none           &studio_unlock
             >;
         };
@@ -263,15 +263,15 @@
         };
 
 
-        one {
-            display-name = "One";
-            bindings = <
-            &none           &kp LSHIFT      &kp ESC         &kp BACKSPACE   &none                                           &none           &none           &none           &none           &ind_con
-            &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                       &none           &none           &none           &none           &ind_bat
-            &none           &kp LG(Z)       &kp LG(LS(Z))   &ind_con        &ind_bat                                        &none           &none           &none           &none           &none
-                                                            &to BASE        &none                                           &none           &none
-            >;
-        };
+//        one {
+//            display-name = "One";
+//            bindings = <
+//            &none           &kp LSHIFT      &kp ESC         &kp BACKSPACE   &none                                           &none           &none           &none           &none           &ind_con
+//            &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                       &none           &none           &none           &none           &ind_bat
+//            &none           &kp LG(Z)       &kp LG(LS(Z))   &ind_con        &ind_bat                                        &none           &none           &none           &none           &none
+//                                                            &to BASE        &none                                           &none           &none
+//            >;
+//        };
     };
 
 // soft_off {
