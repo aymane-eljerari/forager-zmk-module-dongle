@@ -247,7 +247,7 @@
             bindings = <
             &kp C_BRI_UP    &kp LSHIFT      &kp LCTRL       &kp MEH         &kp C_VOL_UP                                    &none           &cam KP_PLUS    &cam O          &cam U          &none
             &kp C_BRI_DN    &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp C_VOL_DN                                    &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp ENTER
-            &cpb C          &mm N5          &mm Q           &mm D           &kp C_MUTE                                      &kp BACKSPACE   &cam KP_MINUS   &cam F          &cam P          &cam R
+            &cpb C          &mm N5          &lck Q          &mm D           &kp C_MUTE                                      &kp BACKSPACE   &cam KP_MINUS   &cam F          &cam P          &cam R
                                                             &kp LALT        &kp LCMD                                        &none           &studio_unlock
             >;
         };
