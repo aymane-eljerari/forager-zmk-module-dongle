@@ -12,7 +12,7 @@
 #define DSK  3
 #define NAV  4
 #define APP  5
-// #define ONE  6
+#define ONE  6
 
 
 / {
@@ -217,7 +217,7 @@
             bindings = <
             &mo NUM         &kp PERCENT     &kp LPAR        &kp RPAR        &kp AT                                         &kp KP_PLUS     &kp LBKT        &kp RBKT        &kp ESC         &none
             &kp TAB         &kp CARET       &kp STAR        &kp KP_EQUAL    &kp DOLLAR                                     &kp KP_MINUS    &kp SEMICOLON   &kp APOSTROPHE  &kp BACKSLASH   &kp ENTER
-            &kp MEH         &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp BACKSPACE   &kp EXCL        &kp AMPERSAND   &kp GRAVE       &none
+            &kp MEH         &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp BACKSPACE   &kp EXCL        &kp AMPERSAND   &kp GRAVE       &to ONE
                                                             &none           &none                                          &none           &kp LSHIFT
             >;
         };
@@ -263,15 +263,15 @@
         };
 
 
-//        one {
-//            display-name = "One";
-//            bindings = <
-//            &none           &kp LSHIFT      &kp ESC         &kp BACKSPACE   &none                                           &none           &none           &none           &none           &ind_con
-//            &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                       &none           &none           &none           &none           &ind_bat
-//            &none           &kp LG(Z)       &kp LG(LS(Z))   &ind_con        &ind_bat                                        &none           &none           &none           &none           &none
-//                                                            &to BASE        &none                                           &none           &none
-//            >;
-//        };
+        one {
+            display-name = "One";
+            bindings = <
+            &none           &kp LSHIFT      &kp ESC         &kp BACKSPACE   &none                                           &none           &none           &none           &none           &ind_con
+            &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                       &none           &none           &none           &none           &ind_bat
+            &none           &kp LG(Z)       &kp LG(LS(Z))   &none           &none                                           &none           &none           &none           &none           &to BASE
+                                                            &none           &none                                           &none           &none
+            >;
+        };
     };
 
 // soft_off {
