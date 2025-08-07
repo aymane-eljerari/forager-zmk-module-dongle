@@ -18,7 +18,7 @@
 / {
     behaviors {
 
-        // &mo DSK + LALT
+        // &mo DSK + LCTRL
         lm: layer_mod {
             compatible = "zmk,behavior-macro-two-param";
             wait-ms = <0>;
@@ -208,7 +208,7 @@
             &kp B           &kp L           &kp D           &kp C           &kp V                                          &kp J           &kp F           &kp O           &kp U           &kp SPACE
             &kp N           &kp R           &kp T           &kp S           &kp G                                          &kp Y           &kp H           &kp A           &kp E           &kp I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                          &kp K           &kp P           &kp SLASH       &kp KP_DOT      &kp COMMA
-                                                            &lm DSK LALT    &mo SYM                                        &kp SPACE       &kp LSHIFT
+                                                            &lm DSK LCTRL   &mo SYM                                        &kp SPACE       &kp LSHIFT
             >;
         };
 
@@ -235,7 +235,7 @@
         dsk {
             display-name = "Desk";
             bindings = <
-            &kp B           &kp LSHIFT      &kp LCTRL       &kp LCMD        &kp V                                           &kp Y            &kp F           &kp O           &kp U           &none
+            &kp B           &kp LSHIFT      &kp LALT        &kp LCMD        &kp V                                           &kp Y            &kp F           &kp O           &kp U           &none
             &kp N1          &kp N2          &kp N3          &kp N4          &kp G                                           &kp H            &kp J           &kp K           &kp L           &kp I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &none            &kp P           &kp T           &kp D           &none
                                                             &none           &none                                           &mo NAV          &mo APP
