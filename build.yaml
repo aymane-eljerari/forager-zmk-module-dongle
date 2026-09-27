@@ -28,15 +28,25 @@ include:
   #     Confirmed via `west boards --board xiao_ble --format "{qualifiers}"`
   #     -> nrf52840,nrf52840/sense,nrf52840/zmk, and the /zmk variant is
   #     also a meaningfully different (larger) build than the plain one.
+  #
+  # Zephyr's Kconfig parser treats any deprecated-symbol warning as a hard
+  # build error (KSCAN is currently flagged deprecated), which aborts every
+  # combo below before it even gets a .config written — confirmed locally
+  # both with and without this flag. -DCONFIG_WARN_DEPRECATED=n only
+  # silences the notice, it doesn't change what gets built.
   - board: xiao_ble/nrf52840/zmk
     shield: forager_dongle prospector_adapter
     snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_WARN_DEPRECATED=n
   - board: xiao_ble/nrf52840/zmk
     shield: forager_left rgbled_adapter
+    cmake-args: -DCONFIG_WARN_DEPRECATED=n
   - board: xiao_ble/nrf52840/zmk
     shield: forager_right rgbled_adapter
+    cmake-args: -DCONFIG_WARN_DEPRECATED=n
   - board: xiao_ble/nrf52840/zmk
     shield: settings_reset
+    cmake-args: -DCONFIG_WARN_DEPRECATED=n
   # - board: xiao_ble/nrf52840/zmk
   #   shield: forager_dongle
   #   snippet: zmk-usb-logging
