@@ -34,16 +34,31 @@ include:
   # combo below before it even gets a .config written — confirmed locally
   # both with and without this flag. -DCONFIG_WARN_DEPRECATED=n only
   # silences the notice, it doesn't change what gets built.
+  #
+  # prospector_adapter (display) is gone entirely, not just unselected: this
+  # setup has no display, and prospector-zmk-module's Kconfig.defconfig has
+  # its own defect (LV_DISP_DEF_REFR_PERIOD defined with no type) that's
+  # *unconditionally* parsed for every combo regardless of shield — it was
+  # aborting settings_reset and forager_left/right too, which don't even
+  # reference it. Removed the whole project from config/west.yml rather
+  # than just dropping its shield.
+  #
+  # forager_left/right (rgbled_adapter, no display module involved) also
+  # need -DCONFIG_ZMK_USB=n: xiao_ble's own /zmk-variant defconfig sets
+  # CONFIG_ZMK_USB=y unconditionally, which conflicts with these being
+  # split peripherals (USB HID only applies to the central/dongle side) and
+  # aborts the build as an unsatisfied-dependency warning. forager_dongle is
+  # the central, so it correctly keeps ZMK_USB=y from the board default.
   - board: xiao_ble/nrf52840/zmk
-    shield: forager_dongle prospector_adapter
+    shield: forager_dongle
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_WARN_DEPRECATED=n
   - board: xiao_ble/nrf52840/zmk
     shield: forager_left rgbled_adapter
-    cmake-args: -DCONFIG_WARN_DEPRECATED=n
+    cmake-args: -DCONFIG_WARN_DEPRECATED=n -DCONFIG_ZMK_USB=n
   - board: xiao_ble/nrf52840/zmk
     shield: forager_right rgbled_adapter
-    cmake-args: -DCONFIG_WARN_DEPRECATED=n
+    cmake-args: -DCONFIG_WARN_DEPRECATED=n -DCONFIG_ZMK_USB=n
   - board: xiao_ble/nrf52840/zmk
     shield: settings_reset
     cmake-args: -DCONFIG_WARN_DEPRECATED=n
