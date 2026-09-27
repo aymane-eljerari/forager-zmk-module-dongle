@@ -4,15 +4,23 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/rgbled_widget.dtsi>  // needed to use the behaviors
 
-#define MEH LS(LC(LALT))
+#define MEH   LS(LC(LALT))
+// Hyper = Ctrl+Alt+Cmd+Shift, matching skhd's `hyper` keyword on the macOS
+// side. Same nested-modifier-on-a-modifier-keycode trick as MEH above, one
+// level deeper (innermost LGUI is itself a modifier keycode, so holding
+// this single &kp holds all four).
+#define HYPER LS(LC(LA(LGUI)))
 
-#define BASE 0
-#define SYM  1
-#define NUM  2
-#define DSK  3
-#define NAV  4
-#define APP  5
-#define ONE  6
+#define BASE   0
+#define SYM    1
+#define NUM    2
+#define DSK    3
+#define NAV    4
+#define APP    5
+#define ONE    6
+#define WARP   7
+#define STACK  8
+#define RESIZE 9
 
 
 / {
@@ -208,7 +216,7 @@
             &kp B           &kp L           &kp D           &kp C           &kp V                                          &kp J           &kp F           &kp O           &kp U           &kp SPACE
             &kp N           &kp R           &kp T           &kp S           &kp G                                          &kp Y           &kp H           &kp A           &kp E           &kp I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                          &kp K           &kp P           &kp SLASH       &kp KP_DOT      &kp COMMA
-                                                            &lm DSK LCTRL   &mo SYM                                        &kp SPACE       &kp LSHIFT
+                                                            &lm DSK HYPER   &mo SYM                                        &kp SPACE       &kp LSHIFT
             >;
         };
 
@@ -234,8 +242,15 @@
 
         dsk {
             display-name = "Desk";
-            bindings = <
-            &kp B           &kp LSHIFT      &kp LALT        &kp LCMD        &kp V                                           &kp Y            &kp F           &kp O           &kp U           &none
+            // DSK is held via &lm DSK HYPER, so Hyper is already active for
+            // every key below. LSHIFT/LALT/LCMD here used to let you compose
+            // extra modifiers on top of DSK's old Ctrl-only hold; now that
+            // the hold itself is full Hyper, adding any one of those back is
+            // a no-op bit already set — so those three slots are repurposed
+            // as the WARP/STACK/RESIZE momentary sublayers (mirroring the
+            // Voyager's MO(9)/MO(11)/MO(10) row, same move/stack/resize
+            // order), held with this hand and tapped with H/J/K/L below.
+            &kp B           &mo WARP        &mo STACK       &mo RESIZE      &kp V                                           &kp Y            &kp F           &kp O           &kp U           &none
             &kp N1          &kp N2          &kp N3          &kp N4          &kp G                                           &kp H            &kp J           &kp K           &kp L           &kp I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &none            &kp P           &kp T           &kp D           &none
                                                             &none           &none                                           &mo NAV          &mo APP
@@ -270,6 +285,48 @@
             &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                       &none           &none           &none           &none           &ind_bat
             &none           &kp LG(Z)       &kp LG(LS(Z))   &none           &none                                           &none           &none           &none           &none           &to BASE
                                                             &kp LALT        &none                                           &none           &none
+            >;
+        };
+
+        // WARP/STACK/RESIZE: momentary overlays on DSK, held from the
+        // left-hand row above (WARP/STACK/RESIZE keys) and tapped here with
+        // the right hand at the same H/J/K/L position DSK uses for focus,
+        // in the same west/south/north/east order. Hyper is already held
+        // from DSK's &lm, so these just need to be unique keycodes matching
+        // skhd's bindings — everything else stays &trans.
+        warp {
+            display-name = "Warp";
+            bindings = <
+            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
+            &trans          &trans          &trans          &trans          &trans                                          &kp Z           &kp X           &kp C           &kp V           &trans
+            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
+                                                            &trans          &trans                                          &trans          &trans
+            >;
+        };
+
+        stack {
+            display-name = "Stack";
+            bindings = <
+            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
+            &trans          &trans          &trans          &trans          &trans                                          &kp Q           &kp W           &kp E           &kp R           &trans
+            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
+                                                            &trans          &trans                                          &trans          &trans
+            >;
+        };
+
+        resize {
+            display-name = "Resize";
+            // skhd binds the plain digits (7/8/9/0), not the shifted
+            // symbols — Hyper already carries Shift, so sending the bare
+            // digit here is enough (same reasoning as the Voyager's RESIZE
+            // layer, which sends KC_AMPR/etc. only because QMK's hold
+            // stacks an extra explicit Shift on top; ZMK's Hyper hold
+            // already includes it, so N7/N8/N9/N0 is the direct equivalent).
+            bindings = <
+            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
+            &trans          &trans          &trans          &trans          &trans                                          &kp N7          &kp N8          &kp N9          &kp N0          &trans
+            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
+                                                            &trans          &trans                                          &trans          &trans
             >;
         };
     };
