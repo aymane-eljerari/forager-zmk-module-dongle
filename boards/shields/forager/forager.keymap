@@ -233,10 +233,10 @@
             // move/stack/resize order), held with this hand and tapped with
             // H/J/K/L below.
             bindings = <
-            &am B           &mo WARP        &mo STACK       &mo RESIZE      &am V                                           &am Y            &am F           &am O           &am U           &none
+            &am B           &mo WARP        &mo STACK       &mo RESIZE      &am V                                           &am Y            &am F           &am O           &am U           &am N5
             &am N1          &am N2          &am N3          &am N4          &am G                                           &am H            &am J           &am K           &am L           &am I
-            &am X           &am Q           &am M           &am W           &am Z                                           &none            &am P           &am T           &am D           &none
-                                                            &none           &none                                           &mo NAV          &mo APP
+            &am X           &am Q           &am M           &am W           &am Z                                           &am MINUS        &am P           &am T           &am D           &am EQUAL
+                                                            &am APOSTROPHE  &am GRAVE                                       &mo NAV          &mo APP
             >;
         };
 
