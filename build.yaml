@@ -18,16 +18,21 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
+  # config/west.yml pins zmk at `revision: main`, a floating branch. Upstream
+  # Zephyr renamed this board from seeeduino_xiao_ble to xiao_ble at some
+  # point on main (confirmed both locally and in CI: "Invalid BOARD" for the
+  # old name) — not something this repo changed, just drift from tracking
+  # main instead of a pinned release.
+  - board: xiao_ble
     shield: forager_dongle prospector_adapter
     snippet: studio-rpc-usb-uart
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: forager_left rgbled_adapter
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: forager_right rgbled_adapter
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: settings_reset
-  # - board: seeeduino_xiao_ble
+  # - board: xiao_ble
   #   shield: forager_dongle
   #   snippet: zmk-usb-logging
 
