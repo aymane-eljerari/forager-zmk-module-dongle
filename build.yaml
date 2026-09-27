@@ -18,21 +18,26 @@
 #
 ---
 include:
-  # config/west.yml pins zmk at `revision: main`, a floating branch. Upstream
-  # Zephyr renamed this board from seeeduino_xiao_ble to xiao_ble at some
-  # point on main (confirmed both locally and in CI: "Invalid BOARD" for the
-  # old name) — not something this repo changed, just drift from tracking
-  # main instead of a pinned release.
-  - board: xiao_ble
+  # config/west.yml pins zmk at `revision: main`, a floating branch, which
+  # has drifted twice on this board:
+  #  1. Upstream Zephyr renamed it from seeeduino_xiao_ble to xiao_ble.
+  #  2. Zephyr 4.1 added a dedicated ZMK-compat board variant/qualifier
+  #     (nrf52840/zmk), and ZMK's CI now hard-errors ("the selected board is
+  #     not set up for ZMK and there is a ZMK variant available") if you
+  #     build the plain board instead: https://zmk.dev/blog/2025/12/09/zephyr-4-1#zmk-board-variant
+  #     Confirmed via `west boards --board xiao_ble --format "{qualifiers}"`
+  #     -> nrf52840,nrf52840/sense,nrf52840/zmk, and the /zmk variant is
+  #     also a meaningfully different (larger) build than the plain one.
+  - board: xiao_ble/nrf52840/zmk
     shield: forager_dongle prospector_adapter
     snippet: studio-rpc-usb-uart
-  - board: xiao_ble
+  - board: xiao_ble/nrf52840/zmk
     shield: forager_left rgbled_adapter
-  - board: xiao_ble
+  - board: xiao_ble/nrf52840/zmk
     shield: forager_right rgbled_adapter
-  - board: xiao_ble
+  - board: xiao_ble/nrf52840/zmk
     shield: settings_reset
-  # - board: xiao_ble
+  # - board: xiao_ble/nrf52840/zmk
   #   shield: forager_dongle
   #   snippet: zmk-usb-logging
 
