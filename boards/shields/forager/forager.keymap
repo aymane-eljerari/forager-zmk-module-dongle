@@ -6,6 +6,10 @@
 #include <behaviors/rgbled_widget.dtsi>  // needed to use the behaviors
 
 #define MEH   LS(LC(LALT))
+// Hyper = Ctrl+Alt+Cmd+Shift, matching skhd's `hyper` keyword and the
+// Voyager's LM()-based Hyper. Same nested-modifier-on-a-modifier-keycode
+// trick as MEH above, one level deeper.
+#define HYPER LS(LC(LA(LGUI)))
 
 #define BASE   0
 #define SYM    1
@@ -201,7 +205,7 @@
             bindings = <
             &mo NUM         &kp PERCENT     &kp LPAR        &kp RPAR        &kp AT                                         &kp PLUS        &kp LBKT        &kp RBKT        &kp ESC         &kp DELETE
             &kp TAB         &kp CARET       &kp STAR        &kp EQUAL    &kp DOLLAR                                        &kp MINUS       &kp SEMICOLON   &kp APOSTROPHE  &kp BACKSLASH   &kp ENTER
-            &kp MEH         &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp BACKSPACE   &kp EXCL        &kp AMPERSAND   &kp GRAVE       &to ONE
+            &kp HYPER       &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp BACKSPACE   &kp EXCL        &kp AMPERSAND   &kp GRAVE       &to ONE
                                                             &none           &none                                          &to NUM         &kp LSHIFT
             >;
         };
