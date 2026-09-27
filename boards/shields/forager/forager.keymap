@@ -280,9 +280,10 @@
         // stays &trans.
         warp {
             display-name = "Warp";
+            // swapped with resize below per request: warp now sends 7/8/9/0
             bindings = <
             &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
-            &trans          &trans          &trans          &trans          &trans                                          &am Z           &am X           &am C           &am V           &trans
+            &trans          &trans          &trans          &trans          &trans                                          &am N7          &am N8          &am N9          &am N0          &trans
             &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
                                                             &trans          &trans                                          &trans          &trans
             >;
@@ -300,15 +301,10 @@
 
         resize {
             display-name = "Resize";
-            // skhd binds the plain digits (7/8/9/0), not the shifted
-            // symbols — Hyper already carries Shift, so sending the bare
-            // digit here is enough (same reasoning as the Voyager's RESIZE
-            // layer, which sends KC_AMPR/etc. only because QMK's hold
-            // stacks an extra explicit Shift on top; &am's Hyper press
-            // here is the direct equivalent, so N7/N8/N9/N0 is enough).
+            // swapped with warp above per request: resize now sends z/x/c/v
             bindings = <
             &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
-            &trans          &trans          &trans          &trans          &trans                                          &am N7          &am N8          &am N9          &am N0          &trans
+            &trans          &trans          &trans          &trans          &trans                                          &am Z           &am X           &am C           &am V           &trans
             &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
                                                             &trans          &trans                                          &trans          &trans
             >;
