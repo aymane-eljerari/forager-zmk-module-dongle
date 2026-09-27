@@ -1,3 +1,4 @@
+// clang-format off
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -208,10 +209,10 @@
         num {
             display-name = "Number";
             bindings = <
-            &none           &kp PERCENT     &kp LPAR        &kp RPAR        &kp KP_DIVIDE                                   &kp KP_PLUS     &kp KP_N7       &kp KP_N8       &kp KP_N9       &none
-            &none           &kp CARET       &kp STAR        &kp KP_EQUAL    &kp KP_DOT                                      &kp KP_MINUS    &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp ENTER
-            &none           &kp UNDER       &kp LT          &kp GT          &kp COMMA                                       &kp BACKSPACE   &kp KP_N1       &kp KP_N2       &kp KP_N3       &none
-                                                            &to BASE        &none                                           &kp SPACE       &kp KP_N0
+            &none           &kp PERCENT     &kp LPAR        &kp RPAR        &kp KP_DIVIDE                                  &kp KP_PLUS     &kp KP_N7       &kp KP_N8       &kp KP_N9       &none
+            &none           &kp CARET       &kp STAR        &kp KP_EQUAL    &kp KP_DOT                                     &kp KP_MINUS    &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp ENTER
+            &none           &kp UNDER       &kp LT          &kp GT          &kp COMMA                                      &kp BACKSPACE   &kp KP_N1       &kp KP_N2       &kp KP_N3       &none
+                                                            &to BASE        &none                                          &kp SPACE       &kp KP_N0
             >;
         };
 
@@ -233,30 +234,30 @@
             // move/stack/resize order), held with this hand and tapped with
             // H/J/K/L below.
             bindings = <
-            &am B           &mo WARP        &mo STACK       &mo RESIZE      &am V                                           &am Y            &am F           &am O           &am U           &am N5
-            &am N1          &am N2          &am N3          &am N4          &am G                                           &am H            &am J           &am K           &am L           &am I
-            &am X           &am Q           &am M           &am W           &am Z                                           &am MINUS        &am P           &am T           &am D           &am EQUAL
-                                                            &am APOSTROPHE  &am GRAVE                                       &mo NAV          &mo APP
+            &am B           &mo WARP        &mo STACK       &mo RESIZE      &am V                                          &am Y           &am F           &am O           &am U           &am N5
+            &am N1          &am N2          &am N3          &am N4          &am G                                          &am H           &am J           &am K           &am L           &am I
+            &am X           &am Q           &am M           &am W           &am Z                                          &am MINUS       &am P           &am T           &am D           &am EQUAL
+                                                            &am APOSTROPHE  &am GRAVE                                      &mo NAV         &mo APP
             >;
         };
 
         nav {
             display-name = "Nav";
             bindings = <
-            &kp C_BRI_UP    &kp LSHIFT      &kp LCTRL       &kp MEH         &kp C_VOL_UP                                    &none           &cam KP_PLUS    &cam O          &cam U          &none
-            &kp C_BRI_DN    &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp C_VOL_DN                                    &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp ENTER
-            &cpb C          &mm N5          &lck Q          &mm D           &kp C_MUTE                                      &kp BACKSPACE   &cam KP_MINUS   &cam F          &cam P          &cam R
-                                                            &kp LALT        &kp LCMD                                        &none           &studio_unlock
+            &kp C_BRI_UP    &kp LSHIFT      &kp LCTRL       &kp MEH         &kp C_VOL_UP                                   &none           &cam KP_PLUS    &cam O          &cam U          &none
+            &kp C_BRI_DN    &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp C_VOL_DN                                   &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp ENTER
+            &cpb C          &mm N5          &lck Q          &mm D           &kp C_MUTE                                     &kp BACKSPACE   &cam KP_MINUS   &cam F          &cam P          &cam R
+                                                            &kp LALT        &kp LCMD                                       &none           &studio_unlock
             >;
         };
 
         app {
             display-name = "App";
             bindings = <
-            &am B           &am L           &am D           &am C           &am V                                           &am J           &am F           &am O           &am U           &none
-            &am N           &am R           &am T           &am S           &am G                                           &am Y           &am H           &am A           &am E           &am I
-            &am X           &am Q           &am M           &am W           &am Z                                           &am K           &am P           &none           &none           &none
-                                                            &none           &none                                           &none           &none
+            &am B           &am L           &am D           &am C           &am V                                          &am J           &am F           &am O           &am U           &none
+            &am N           &am R           &am T           &am S           &am G                                          &am Y           &am H           &am A           &am E           &am I
+            &am X           &am Q           &am M           &am W           &am Z                                          &am K           &am P           &none           &none           &none
+                                                            &none           &none                                          &none           &none
             >;
         };
 
@@ -264,10 +265,10 @@
         one {
             display-name = "One";
             bindings = <
-            &kp ESC         &kp LSHIFT      &kp LCTRL       &kp LCMD        &kp DEL                                         &none           &none           &none           &none           &ind_con
-            &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                       &none           &none           &none           &none           &ind_bat
-            &none           &kp LG(Z)       &kp LG(LS(Z))   &none           &none                                           &none           &none           &none           &none           &to BASE
-                                                            &kp LALT        &none                                           &none           &none
+            &kp ESC         &kp LSHIFT      &kp LCTRL       &kp LCMD        &kp DEL                                        &none           &none           &none           &none           &ind_con
+            &kp TAB         &kp LG(C)       &kp LG(X)       &kp LG(V)       &kp LG(E)                                      &none           &none           &none           &none           &ind_bat
+            &none           &kp LG(Z)       &kp LG(LS(Z))   &none           &none                                          &none           &none           &none           &none           &to BASE
+                                                            &kp LALT        &none                                          &none           &none
             >;
         };
 
@@ -282,20 +283,20 @@
             display-name = "Warp";
             // swapped with resize below per request: warp now sends 7/8/9/0
             bindings = <
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
-            &trans          &trans          &trans          &trans          &trans                                          &am N7          &am N8          &am N9          &am N0          &trans
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
-                                                            &trans          &trans                                          &trans          &trans
+            &trans          &trans          &trans          &trans          &trans                                         &trans          &trans          &trans          &trans          &trans
+            &trans          &trans          &trans          &trans          &trans                                         &am N7          &am N8          &am N9          &am N0          &trans
+            &trans          &trans          &trans          &trans          &trans                                         &trans          &trans          &trans          &trans          &trans
+                                                            &trans          &trans                                         &trans          &trans
             >;
         };
 
         stack {
             display-name = "Stack";
             bindings = <
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
-            &trans          &trans          &trans          &trans          &trans                                          &am Q           &am W           &am E           &am R           &trans
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
-                                                            &trans          &trans                                          &trans          &trans
+            &trans          &trans          &trans          &trans          &trans                                         &trans          &trans          &trans          &trans          &trans
+            &trans          &trans          &trans          &trans          &trans                                         &am Q           &am W           &am E           &am R           &trans
+            &trans          &trans          &trans          &trans          &trans                                         &trans          &trans          &trans          &trans          &trans
+                                                            &trans          &trans                                         &trans          &trans
             >;
         };
 
@@ -303,10 +304,10 @@
             display-name = "Resize";
             // swapped with warp above per request: resize now sends z/x/c/v
             bindings = <
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
-            &trans          &trans          &trans          &trans          &trans                                          &am Z           &am X           &am C           &am V           &trans
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
-                                                            &trans          &trans                                          &trans          &trans
+            &trans          &trans          &trans          &trans          &trans                                         &trans          &trans          &trans          &trans          &trans
+            &trans          &trans          &trans          &trans          &trans                                         &am Z           &am X           &am C           &am V           &trans
+            &trans          &trans          &trans          &trans          &trans                                         &trans          &trans          &trans          &trans          &trans
+                                                            &trans          &trans                                         &trans          &trans
             >;
         };
     };
