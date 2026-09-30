@@ -206,7 +206,7 @@
             &mo NUM         &kp PERCENT     &kp LPAR        &kp RPAR        &kp AT                                         &kp PLUS        &kp LBKT        &kp RBKT        &kp ESC         &kp DELETE
             &kp TAB         &kp CARET       &kp STAR        &kp EQUAL    &kp DOLLAR                                        &kp MINUS       &kp SEMICOLON   &kp APOSTROPHE  &kp BACKSLASH   &kp ENTER
             &kp HYPER       &kp UNDER       &kp LT          &kp GT          &kp HASH                                       &kp BACKSPACE   &kp EXCL        &kp AMPERSAND   &kp GRAVE       &to ONE
-                                                            &none           &none                                          &to NUM         &kp LSHIFT
+                                                            &none           &none                                          &kp SPACE       &kp LSHIFT
             >;
         };
 
